@@ -3,7 +3,7 @@ using FootballManagement.WebApi.Models.Entities.Images;
 
 namespace FootballManagement.WebApi.Models.Entities
 {
-    public class LeagueImage : Entity<int>
+    public class LeagueImage : Entity<Guid>
     {
         public int LeagueId { get; set; }
 
