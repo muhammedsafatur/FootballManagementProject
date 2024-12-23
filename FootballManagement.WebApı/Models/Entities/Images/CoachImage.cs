@@ -9,23 +9,9 @@
 
         public string Url { get; set; }
 
-        // Zaman damgaları (isteğe bağlı)
-     
-
-        // Yapıcı metot
-        public CoachImage()
-        {
-            // Varsayılan değerler, gerekirse başka başlatmalar yapılabilir
-        }
-
-        // Dönüştürme metodları (DTO'dan entity'ye dönüş)
         public static implicit operator CoachImage(CoachImageAddRequestDto dto)
         {
-            return new CoachImage
-            {
-                CoachId = dto.CoachId,
-                Url = dto.Url
-            };
+            return new CoachImage { CoachId = dto.CoachId };
         }
     }
 }

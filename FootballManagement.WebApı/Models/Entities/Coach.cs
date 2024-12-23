@@ -1,4 +1,5 @@
 ﻿using FootballManagement.WebApi.Models.Entities;
+using FootballManagement.WebApi.Models.Entities.Images;
 
 namespace FootballManagement.WebApi.Models.Entities
 {
@@ -17,5 +18,12 @@ namespace FootballManagement.WebApi.Models.Entities
         public int ClubId { get; set; }
         public Club Club { get; set; }
         public string FullName=> $"{FirstName} {LastName}";
+
+        public virtual List<CoachImage> CoachImages { get; set; }
+        public Coach()
+        {
+
+            CoachImages = new List<CoachImage>();
+        }
     }
 }

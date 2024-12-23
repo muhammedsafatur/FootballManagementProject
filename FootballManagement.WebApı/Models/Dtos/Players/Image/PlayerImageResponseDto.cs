@@ -1,4 +1,4 @@
-﻿namespace FootballManagement.WebApi.Models.Dtos.PlayerImages;
+﻿namespace FootballManagement.WebApi.Models.Dtos.Players.Image;
 
 public sealed record PlayerImageResponseDto
 {

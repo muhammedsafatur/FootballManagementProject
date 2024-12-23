@@ -1,4 +1,5 @@
 ﻿using FootballManagement.WebApi.Models.Dtos.Images;
+using FootballManagement.WebApi.Models.Dtos.Players.Image;
 
 namespace FootballManagement.WebApi.Models.Entities.Images
 {
@@ -13,21 +14,9 @@ namespace FootballManagement.WebApi.Models.Entities.Images
 
 
 
-        // Yapıcı metot
-        public ClubImage()
-        {
-            // Varsayılan değerler, gerekirse başka başlatmalar yapılabilir
-        }
-
-        // Dönüştürme metodları
         public static implicit operator ClubImage(ClubImageAddRequestDto dto)
         {
-            return new ClubImage
-            {
-                ClubId = dto.ClubId, 
-                LogoUrl = dto.LogoUrl,
-                
-            };
+            return new ClubImage { ClubId = dto.ClubId };
         }
     }
 }

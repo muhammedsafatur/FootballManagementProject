@@ -28,11 +28,11 @@ namespace FootballManagement.WebApi.Models.Entities
         public int CountryId { get; set; }
         public virtual Country Country { get; set; }
 
-        public virtual List<PlayerImage> playerImages { get; set; }
+        public virtual List<PlayerImage> PlayerImages { get; set; }
         public Player()
         {
 
-            playerImages = new List<PlayerImage>();
+            PlayerImages = new List<PlayerImage>();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace FootballManagement.WebApi.Models.Entities.Images
+﻿using FootballManagement.WebApi.Models.Dtos.Players.Image;
+
+namespace FootballManagement.WebApi.Models.Entities.Images
 {
     public class PlayerImage : Entity<Guid>
     {
@@ -8,24 +10,11 @@
 
         public string Url { get; set; }
 
-        // Zaman damgaları (isteğe bağlı)
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
-
-        // Yapıcı metot
-        public PlayerImage()
-        {
-            // PlayerId gibi zorunlu özelliklerin varsayılan değerlerini başlatıyoruz.
-        }
-
-        // Dönüştürme metodları
+       
+       
         public static implicit operator PlayerImage(PlayerImageAddRequestDto dto)
         {
-            return new PlayerImage
-            {
-                PlayerId = dto.PlayerId,
-                Url = dto.Url
-            };
+            return new PlayerImage { PlayerId = dto.PlayerId };
         }
     }
 }

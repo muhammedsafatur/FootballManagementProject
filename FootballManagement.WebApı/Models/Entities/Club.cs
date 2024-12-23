@@ -16,16 +16,19 @@ namespace FootballManagement.WebApi.Models.Entities
         public League League { get; set; }
 
         public List<Player> Players { get; set; }
+        public virtual List<ClubImage> ClubImages { get; set; }
 
+        public Club()
+        {
 
-
+            ClubImages = new List<ClubImage>();
+        }
 
         public static implicit operator Club(ClubAddRequestDto dto)
         {
             return new Club
             {
                 Name = dto.Name,
-                LogoUrl = dto.LogoUrl,
                 YearOfEstablishment=dto.YearOfEstablishment
             };
         }

@@ -2,7 +2,8 @@
 {
     public class ClubImageAddRequestDto
     {
-        public int ClubId { get; set; }
-        public string LogoUrl { get; set; }
+        public int ClubId { get; init; }
+
+        public IFormFile File { get; set; }
     }
 }
