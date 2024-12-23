@@ -15,12 +15,14 @@ namespace FootballManagement.WebApi.Models.Entities
         public virtual List<Player> Players { get; set; }
         public virtual List<Club> Clubs { get; set; }
         public virtual List<Coach> Coachs { get; set; }
+        public virtual Country Country { get; set; }
         public League()
         {
             Players = new List<Player>();
             Clubs = new List<Club>();
             Coachs = new List<Coach>();
             LeagueImages = new List<LeagueImage>();
+            Country= new Country();
 
 
 

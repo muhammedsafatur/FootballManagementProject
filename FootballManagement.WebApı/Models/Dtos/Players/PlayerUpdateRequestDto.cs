@@ -1,27 +1,27 @@
 ﻿using FootballManagement.WebApi.Models.Enums;
 
-namespace FootballManagement.WebApi.Models.Dtos.Players;
-
-public sealed record PlayerUpdateRequestDto
+namespace FootballManagement.WebApi.Models.Dtos.Players
 {
+    public sealed record PlayerUpdateRequestDto
+    {
+        public Guid Id { get; set; } // Güncelleme yapılacak oyuncunun Id'si
 
-    public Guid Id { get; set; }
+        public string Name { get; set; } // Oyuncunun adı
 
-    public string Name { get; init; }
+        public string Surname { get; set; } // Oyuncunun soyadı
 
-    public string Surname { get; init; }
+        public int Age { get; set; } // Oyuncunun yaşı
 
-    public int Age { get; init; }
+        public int JerseyNumber { get; set; } // Oyuncunun forma numarası
 
-    public int JerseyNumber { get; init; }
-    public Branch Branch { get; init; }
+        public Branch Branch { get; set; } // Oyuncunun branşı (örneğin Futbol, Basketbol vb.)
 
-    public Gender Gender { get; init; }
+        public Gender Gender { get; set; } // Oyuncunun cinsiyeti
 
-    public decimal Salary { get; init; }
+        public decimal Salary { get; set; } // Oyuncunun maaşı
 
+        public int ClubId { get; set; } // Oyuncunun kulübü
 
-    public int TeamId { get; init; }
-
-    public int CountryId { get; init; }
+        public int CountryId { get; set; } // Oyuncunun bağlı olduğu ülke
+    }
 }

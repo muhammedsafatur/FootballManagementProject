@@ -13,6 +13,10 @@ namespace FootballManagement.WebApi.Models.Dtos.Players
         public string Gender { get; set; }
         public decimal Salary { get; set; }
 
+        // Club ve Country bilgileri eklendi
+        public string ClubName { get; set; }
+        public string CountryName { get; set; }
+
         // Parametreli constructor ekleyelim
         public PlayerResponseDto(Player player)
         {
@@ -21,9 +25,12 @@ namespace FootballManagement.WebApi.Models.Dtos.Players
             Surname = player.Surname;
             Age = player.Age;
             JerseyNumber = player.JerseyNumber;
-            Branch = player.Branch.ToString(); // Enums kullanıyorsanız, toString ile alabilirsiniz
-            Gender = player.Gender.ToString(); // Enums kullanıyorsanız, toString ile alabilirsiniz
+            Branch = player.Branch.ToString(); // Enum to string
+            Gender = player.Gender.ToString(); // Enum to string
             Salary = player.Salary;
+
+            ClubName = player.Club?.Name ?? "Unknown"; // Eğer Club null ise "Unknown"
+            CountryName = player.Country?.Name ?? "Unknown"; // Eğer Country null ise "Unknown"
         }
     }
 }

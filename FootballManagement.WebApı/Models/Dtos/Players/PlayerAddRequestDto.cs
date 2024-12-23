@@ -19,7 +19,7 @@ public sealed record PlayerAddRequestDto
     public decimal Salary { get; init; }
 
 
-    public int TeamId { get; init; }
+    public int ClubId { get; init; }
 
     public int CountryId { get; init; }
 }
