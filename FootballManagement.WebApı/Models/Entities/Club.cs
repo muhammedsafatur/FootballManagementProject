@@ -13,7 +13,7 @@ namespace FootballManagement.WebApi.Models.Entities
         public string? LogoUrl { get; set; }
 
         public int LeagueId { get; set; }
-        public League League { get; set; }
+        public League Leagues { get; set; }
 
         public List<Player> Players { get; set; }
         public virtual List<ClubImage> ClubImages { get; set; }

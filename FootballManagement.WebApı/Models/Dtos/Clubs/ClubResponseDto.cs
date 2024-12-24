@@ -22,7 +22,7 @@ namespace FootballManagement.WebApi.Models.Dtos.Clubs
                 Id = club.Id,
                 Name = club.Name,
                 YearOfEstablishment = club.YearOfEstablishment,
-                LeagueName = club.League?.LeagueName,  // Eğer bir lig varsa, adını al
+                LeagueName = club.Leagues?.LeagueName,  // Eğer bir lig varsa, adını al
                 LogoUrl = club.LogoUrl,  // Eğer kulüp logosu varsa
                 Players = club.Players?.Select(p => new PlayerResponseDto(p)).ToList()  // Kulüp oyuncuları DTO'su şeklinde
             };

@@ -12,6 +12,8 @@ namespace FootballManagement.WebApi.Models.Entities
         public string EndDate { get; set; }
         public string Description { get; set; }
         public virtual Club Club { get; set; }
+        public virtual Player Player { get; set; }
+        public virtual Coach Coach { get; set; }
 
 
 

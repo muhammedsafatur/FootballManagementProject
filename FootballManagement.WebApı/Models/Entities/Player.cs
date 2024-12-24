@@ -25,6 +25,7 @@ namespace FootballManagement.WebApi.Models.Entities
         public virtual Club Club { get; set; }
 
 
+
         public int CountryId { get; set; }
         public virtual Country Country { get; set; }
 
