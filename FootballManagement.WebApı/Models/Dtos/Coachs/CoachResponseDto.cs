@@ -4,10 +4,10 @@ namespace FootballManagement.WebApi.Models.Dtos.Coachs;
 
 public sealed record CoachResponseDto
 {
-    public Guid Id { get; init; }
-    public string FullName { get; init; } // Modeldeki FullName'i kullanın.
-    public string Position { get; init; } // Pozisyon bilgisi eklendi.
-    public string CountryName { get; init; }
+    public Guid Id { get; set; }
+    public string FullName { get; set; } 
+    public string Position { get; set; } 
+    public string CountryName { get; set; }
     public string ClubName { get; set; }
 
     public static implicit operator CoachResponseDto(Coach coach)

@@ -5,15 +5,15 @@ namespace FootballManagement.WebApi.Models.Dtos.Clubs
 {
     public sealed record ClubResponseDto
     {
-        public int Id { get; init; }
-        public string Name { get; init; }
-        public string YearOfEstablishment { get; init; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string YearOfEstablishment { get; set; }
 
         // Opsiyonel alanlar
-        public string? CountryName { get; init; }
-        public string? LeagueName { get; init; }
-        public string? LogoUrl { get; init; }
-        public List<PlayerResponseDto> Players { get; init; } = new List<PlayerResponseDto>();
+        public string? CountryName { get; set; }
+        public string? LeagueName { get; set; }
+        public string? LogoUrl { get; set; }
+        public List<PlayerResponseDto> Players { get; set; } = new List<PlayerResponseDto>();
 
         public static implicit operator ClubResponseDto(Club club)
         {
